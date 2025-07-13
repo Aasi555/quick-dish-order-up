@@ -14,6 +14,72 @@ export type Database = {
   }
   public: {
     Tables: {
+      customer_orders: {
+        Row: {
+          created_at: string
+          customer_name: string
+          id: string
+          items: Json
+          message: string | null
+          status: string
+          table_number: number
+          total_amount: number
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          customer_name: string
+          id?: string
+          items?: Json
+          message?: string | null
+          status?: string
+          table_number: number
+          total_amount?: number
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          customer_name?: string
+          id?: string
+          items?: Json
+          message?: string | null
+          status?: string
+          table_number?: number
+          total_amount?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      menu_items: {
+        Row: {
+          category: string
+          created_at: string
+          id: string
+          name: string
+          price: number
+          size: string | null
+          temperature: string | null
+        }
+        Insert: {
+          category: string
+          created_at?: string
+          id?: string
+          name: string
+          price: number
+          size?: string | null
+          temperature?: string | null
+        }
+        Update: {
+          category?: string
+          created_at?: string
+          id?: string
+          name?: string
+          price?: number
+          size?: string | null
+          temperature?: string | null
+        }
+        Relationships: []
+      }
       projects: {
         Row: {
           created_at: string
